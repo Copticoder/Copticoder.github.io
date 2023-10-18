@@ -3,24 +3,13 @@ layout: default
 is_contact: true
 ---
 
-* Email: [foo@xyz.com](mailto:foo@xyz.com)
-
-* Phone: [+91-123123](tel:+91-123123)
-
----
-
-## Mailing Address
-
-> 221B, Baker Street
->
-> London
->
-> United Kingdom
+* Email: [ahmed.abdelsalam.ap@gmail.com](ahmed.abdelsalam.ap@gmail.com)
+* Work Email: [ahmed.atya@speedlegal.io](ahmed.atya@speedlegal.io)
+* Phone: [+20-1027677747](tel:+20-1027677747)
+* Github: [Copticoder](https://github.com/Copticoder)
 
 ---
 
 ## Social
 
-1. [Facebook](#)
-2. [Twitter](#)
-3. [Google+](#)
+1. [LinkedIn](https://www.linkedin.com/in/ahmed-emad-417174178/)
