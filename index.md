@@ -4,7 +4,7 @@ layout: default
 
 ## About Me
 
-<img class="profile-picture" src="Ahmed Atya.jpg">
+<img class="profile-picture" src="personal picture.jpg">
 
 Hi! I am a Senior year student of B.E. Computer Science & Artificial Intelligence at Kafr El-Sheikh University, Egypt.
 
