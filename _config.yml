@@ -1,10 +1,10 @@
-title: Researcher
-url: "https://Copticoder.com"
+title: Ahmed Atya
+url: "https://Copticoder.github.io"
 baseurl: "/Ahmed Atya"
 
 markdown: kramdown
 #ins_logo: "./bits-logo.png"
-
+# remote_theme: Copticoder/Copticoder.github.io
 tracking_id: #
 
 footer: yes
