@@ -1,6 +1,6 @@
 title: Ahmed Atya
-url: "https://Copticoder.github.io"
-baseurl: "/Ahmed Atya"
+url: "https://Copticoder.github.io/"
+baseurl: "/"
 
 markdown: kramdown
 #ins_logo: "./bits-logo.png"
