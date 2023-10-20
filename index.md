@@ -14,10 +14,11 @@ At the moment, I am interested in the applications of Deep learning in Reinforce
 - Deep Reinforcement Learning
 - Information Retrieval
 - Multi-Agent Reinforcement Learning
-
+- Imitation learning 
+- meta learning
 ## Current Status
 
-I have worked as an R&D engineer at [SpeedLegal](https://speedlegal.io/), a legal tech startup based in US California, where I helped in solving multiple legal problems related to NLP, Information Retrieval and retrieval augmented generation pipelines for contract review automation. 
+I have worked as an R&D engineer at [SpeedLegal](https://speedlegal.io/), a legal tech startup based in US California, where I contributed to solving multiple legal problems related to contract review automation using retrieval augmented generation pipelines. 
 
 ---
 
