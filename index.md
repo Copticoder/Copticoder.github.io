@@ -6,7 +6,7 @@ layout: default
 
 <img class="profile-picture" src="personal picture.jpg">
 
-Hi! I am a Senior year student of B.E. Computer Science & Artificial Intelligence at Kafr El-Sheikh University, Egypt. Aspiring to be a researcher in the field of Artificial Intelligence, I am currently working in the areas Deep Reinforcement Learning and Information Retrieval.
+Hi! My name is Ahmed Atya. I am a Senior year student student of Bachelor's Computer Science & Artificial Intelligence at Kafr El-Sheikh University, Egypt. 
 
 ## Research Interest
 
