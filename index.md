@@ -6,7 +6,7 @@ layout: default
 
 <img class="profile-picture" src="personal picture.jpg">
 
-Hi! My name is Ahmed Atya. I am a Senior year student student of Bachelor's Computer Science & Artificial Intelligence at Kafr El-Sheikh University, Egypt. 
+Hi! My name is Ahmed Atya. I am a Senior year student of Bachelor's in Computer Science & Artificial Intelligence at Kafr El-Sheikh University, Egypt. 
 
 ## Research Interest
 
