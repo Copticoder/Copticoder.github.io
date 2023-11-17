@@ -1,21 +1,15 @@
 ---
 layout: default
 ---
-
 ## About Me
 
 <img class="profile-picture" src="personal picture.jpg">
 
-Hi! My name is Ahmed Atya. I am a Senior year student of Bachelor's in Computer Science & Artificial Intelligence at Kafr El-Sheikh University, Egypt. 
+Hi! My name is Ahmed Atya. I am a Senior year student of Bachelor's in Computer Science & Artificial Intelligence at Kafr El-Sheikh University, Egypt.
 
 ## Research Interest
 
-At the moment, I am interested in the applications of Deep learning in Reinforcement Learning and Information retrieval, especially these topics: 
-- Deep Reinforcement Learning
-- Information Retrieval
-- Multi-Agent Reinforcement Learning
-- Imitation learning 
-- Meta Learning
+At the moment, I am interested in Deep Reinforcement Learning, Meta Learning, Multi-Agent Systems,  and Information retrieval.
 
 ## Current Status
 
