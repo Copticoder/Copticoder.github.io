@@ -1,4 +1,4 @@
-title: Ahmed Atya
+title: Ahmed Attia
 url: "https://Copticoder.github.io/"
 baseurl: "/"
 
@@ -8,7 +8,7 @@ remote_theme: ankitsultana/researcher@gem
 tracking_id: #
 
 footer: yes
-footer_text: "Page design by Ankit Sultana and edited by Ahmed Atya"
+footer_text: "Page design by Ankit Sultana and edited by Ahmed Attia"
 
 sass:
     style: compressed
