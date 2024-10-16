@@ -7,9 +7,14 @@ layout: default
 
 Hi! My name is Ahmed Attia. I am a Senior year student in Bachelor's of Computer Science & Artificial Intelligence at Kafr El-Sheikh University, Egypt.
 
+## Updates
+
+- Aug 2024: Started My MSc. journey in MBZUAI.
+- March 2024: Got Accepted in MBZUAI !
+
 ## Research Interest
 
-At the moment, I am interested in Deep Reinforcement Learning, Meta Learning, Multi-Agent Systems, and Information retrieval.
+At the moment, I am interested in Deep Reinforcement Learning, Meta Learning, Multi-Agent Systems, and Information retrieval. My Main Topic of interest is Neural Archeticture Search.
 
 ## Current Status
 
