@@ -5,7 +5,7 @@ layout: default
 
 <img class="profile-picture" src="personal picture.jpg">
 
-Hi! My name is Ahmed Attia. I am finished my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/).
+Hi! My name is Ahmed (Preferably Amet) Attia. I have finished my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/).
 
 
 ## Research Interest
