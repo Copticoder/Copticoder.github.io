@@ -1,0 +1,56 @@
+
+/* Ordered GFlowNets blog post */
+.content h1 {
+  line-height: 1.2;
+  margin-bottom: 0.25em;
+}
+
+.content figure {
+  margin: 30px 0;
+}
+
+.content figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.content figcaption {
+  margin-top: 8px;
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+}
+
+.paper-figure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin: 30px 0;
+}
+
+.paper-figure-grid figure {
+  margin: 0;
+}
+
+.paper-figure-grid figure:last-child {
+  grid-column: 1 / -1;
+  width: calc(50% - 11px);
+  margin: auto;
+}
+
+.paper-figure-grid.learning-curves figure:last-child {
+  grid-column: auto;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .paper-figure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .paper-figure-grid figure:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+}
