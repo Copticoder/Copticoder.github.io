@@ -2,13 +2,14 @@
 layout: default
 title: Exploring Ordered Sampling in Generative Flow Networks
 description: We study two trajectory-length curricula for GFlowNets and find that learning short trajectories before long ones improves exploration in sparse-reward HyperGrids.
+date: 2025-12-03
 ---
 
 # Exploring Ordered Sampling in Generative Flow Networks
 
-*Ahmed Attia, Idriss Malek, and Salem Lahlou · September 4, 2026*
+*[Ahmed (Amet) Attia](https://scholar.google.com/citations?hl=en&user=8SPGWvEAAAAJ), [Idriss Malek](https://scholar.google.com/citations?user=JPQ3ue4AAAAJ&hl=fr), and [Salem Lahlou](https://scholar.google.com/citations?user=xLSkCrIAAAAJ&hl=en) · December 3, 2025*
 
-Generative Flow Networks, or GFlowNets, are designed to sample many good solutions rather than return only one optimum. That property is attractive in scientific discovery: if several molecules, structures, or sequences are promising, we want a model that represents all of them.
+Generative Flow Networks, or GFlowNets, are designed to sample many good solutions rather than return only one optimum. That property is attractive in scientific discovery: if several molecules, structures, or sequences are promising, we want a model that represents all of them [[1]](#references), [[2]](#references).
 
 In practice, however, GFlowNets can struggle when rewards are sparse or separated by low-reward regions. Standard on-policy training collects trajectories from the model's current policy, so an initially weak policy may repeatedly visit an unhelpful part of the state space. This slows learning and can leave reward modes undiscovered.
 
@@ -35,7 +36,7 @@ One way to understand GFlowNets is through flows. On a tree, assign each leaf it
 
 ## Training with Trajectory Balance
 
-We use the Trajectory Balance (TB) objective. For a complete trajectory from the initial state to terminal state `x`, TB compares two quantities:
+We use the Trajectory Balance (TB) objective [[3]](#references). For a complete trajectory from the initial state to terminal state `x`, TB compares two quantities:
 
 ```
 Z × product of forward probabilities along the trajectory
@@ -51,7 +52,7 @@ A useful property of TB is that the training trajectory does not need to come fr
 
 Long trajectories are generally harder: reward must receive credit through more decisions, and the number of possible paths grows. Short trajectories are easier but cover less of the graph.
 
-Curriculum learning usually presents easier examples before harder ones. Topological Experience Replay suggests another direction: use the topology of the experience graph to propagate values backward from rewarding states, encouraging broader early coverage. These views lead to two opposite schedules:
+Curriculum learning usually presents easier examples before harder ones [[4]](#references). Topological Experience Replay suggests another direction: use the topology of the experience graph to propagate values backward from rewarding states, encouraging broader early coverage [[5]](#references). These views lead to two opposite schedules:
 
 - **Small-then-Large (STL):** begin with short, lower-entropy trajectories, then increase their length. This is the conventional easy-to-hard curriculum and is intended to establish reliable credit assignment before adding complexity.
 - **Large-then-Small (LTS):** begin with long trajectories, then decrease their length. Inspired by topological replay and dynamic programming, this schedule aims to propagate reward information broadly through the DAG before refining shorter paths.
@@ -104,7 +105,7 @@ We tested five `(height, dimension)` configurations:
 
 For every configuration, we compared standard on-policy TB, STL, and LTS. We swept the background reward `R0`, kept `R1 = 1` and `R2 = 3`, and measured the L1 distance between the learned and ground-truth terminal distributions. Lower distance is better.
 
-Every method used the same optimizer and training budget. Each update consumed a batch of 16 trajectories, and a complete run consumed 200,000 trajectories. The forward policy was a two-layer MLP with hidden size 256. The backward policy was fixed to be uniform over parent states. We implemented the experiments with [TorchGFN](https://github.com/GFNOrg/torchgfn) and ran them on a MacBook Air M4.
+Every method used the same optimizer and training budget. Each update consumed a batch of 16 trajectories, and a complete run consumed 200,000 trajectories. The forward policy was a two-layer MLP with hidden size 256. The backward policy was fixed to be uniform over parent states. We implemented the experiments with TorchGFN [[6]](#references) and ran them on a MacBook Air M4.
 
 ## Results
 
@@ -164,6 +165,16 @@ Natural next steps are to:
 We introduced two simple off-policy curricula for GFlowNets. Small-then-Large begins with short trajectories and increases their length; Large-then-Small does the reverse to encourage broad early propagation. In sparse-reward HyperGrids, STL consistently learned the target distribution more accurately than standard on-policy training and LTS. When rewards were easier to discover, the baseline caught up.
 
 The central lesson is simple: exploration depends not only on **where** a generative policy goes, but also on **when** it learns to go there.
+
+## References
+{: #references }
+
+1. Bengio, Y., Lahlou, S., Deleu, T., Hu, E. J., Tiwari, M., and Bengio, E. [“GFlowNet Foundations.”](https://arxiv.org/abs/2111.09266) 2021.
+2. Jain, M., Deleu, T., Hartford, J., Liu, C.-H., Hernandez-Garcia, A., and Bengio, Y. [“GFlowNets for AI-Driven Scientific Discovery.”](https://doi.org/10.1039/D3DD00002H) *Digital Discovery*, 2023.
+3. Malkin, N., Jain, M., Bengio, E., Sun, C., and Bengio, Y. [“Trajectory Balance: Improved Credit Assignment in GFlowNets.”](https://arxiv.org/abs/2201.13259) NeurIPS, 2022.
+4. Bengio, Y., Louradour, J., Collobert, R., and Weston, J. [“Curriculum Learning.”](https://doi.org/10.1145/1553374.1553380) ICML, 2009.
+5. Hong, Z.-W., Chen, T., Lin, Y.-C., Pajarinen, J., and Agrawal, P. [“Topological Experience Replay.”](https://arxiv.org/abs/2203.15845) 2023.
+6. Lahlou, S., Viviano, J. D., Schmidt, V., and Bengio, Y. [“TorchGFN: A PyTorch GFlowNet Library.”](https://arxiv.org/abs/2305.14594) 2023.
 
 ---
 
