@@ -9,6 +9,8 @@ date: 2025-12-03
 
 *[Ahmed Attia](https://scholar.google.com/citations?hl=en&user=8SPGWvEAAAAJ), [Idriss Malek](https://scholar.google.com/citations?user=JPQ3ue4AAAAJ&hl=fr), and [Salem Lahlou](https://scholar.google.com/citations?user=xLSkCrIAAAAJ&hl=en) · December 3, 2025*
 
+[View the code on GitHub](https://github.com/Copticoder/gflownet-sampling-strategies).
+
 Generative Flow Networks, or GFlowNets, are designed to sample many good solutions rather than return only one optimum. That property is attractive in scientific discovery: if several molecules, structures, or sequences are promising, we want a model that represents all of them [[1]](#references), [[2]](#references).
 
 In practice, however, GFlowNets can struggle when rewards are sparse or separated by low-reward regions. Standard on-policy training collects trajectories from the model's current policy, so an initially weak policy may repeatedly visit an unhelpful part of the state space. This slows learning and can leave reward modes undiscovered.
@@ -91,16 +93,16 @@ After this initial phase, both methods spend the remaining 90% of training on st
 
 ### The curricula in motion
 
-The animations pair the evolving learned distribution with its target and L1 distance. STL grows from short trajectories toward longer ones, while LTS runs the same curriculum in reverse.
+The animations pair the evolving learned distribution with its target and L1 distance. STL grows from short trajectories toward longer ones, while LTS runs the same curriculum in reverse. It's evident that STL converges more quickly, finds all the modes, and achieves a lower final L1 distance.
 
 <figure>
   <img src="{{ '/small-then-large-64-2.gif' | relative_url }}" alt="Animation of Small-then-Large training showing the true distribution, evolving learned distribution, and L1 distance over validation steps.">
-  <figcaption>Small-then-Large: build locally, then expand.</figcaption>
+  <figcaption>Small-then-Large</figcaption>
 </figure>
 
 <figure>
   <img src="{{ '/large-then-small-64-2.gif' | relative_url }}" alt="Animation of Large-then-Small training showing the true distribution, evolving learned distribution, and L1 distance over validation steps.">
-  <figcaption>Large-then-Small: explore broadly, then refine.</figcaption>
+  <figcaption>Large-then-Small</figcaption>
 </figure>
 
 ## Experimental setup
