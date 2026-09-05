@@ -179,4 +179,4 @@ The central lesson is simple: exploration depends not only on **where** a genera
 
 ---
 
-If you have questions or would like to discuss extensions of this work, feel free to [contact me]({{ '/contact' | relative_url }}).
+If you have questions or would like to discuss extensions of this work, feel free to [email me](mailto:ahmed.attia@alumni.mbzuai.ac.ae).
