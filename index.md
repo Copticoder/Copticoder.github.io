@@ -9,6 +9,10 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
 
 <figure class="mission-viz">
   <div class="mission-console" role="img" aria-label="An active reinforcement-learning agent takes an action, receives a reward, and pursues the goal of maximizing humanity's long-term utility.">
+    <div class="mission-step">
+      <span>STEP</span>
+      <strong id="mission-step">000</strong>
+    </div>
     <div class="mission-agent">
       <div class="mission-metric">
         <span>ACTION</span>
@@ -41,6 +45,7 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
     ];
     const action = root.querySelector('#mission-action');
     const reward = root.querySelector('#mission-reward');
+    const step = root.querySelector('#mission-step');
     let tick = 0;
     window.setInterval(() => {
       tick += 1;
@@ -48,6 +53,7 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
       action.textContent = transition[0];
       reward.textContent = transition[1];
       reward.classList.toggle('is-negative', transition[1][0] === '-');
+      step.textContent = String(tick).padStart(3, '0');
     }, 1167);
   })();
 </script>
