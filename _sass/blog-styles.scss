@@ -17,7 +17,7 @@
 
 .content figcaption {
   margin-top: 8px;
-  color: #666;
+  color: var(--muted);
   font-size: 13px;
   text-align: center;
 }
@@ -59,7 +59,7 @@
 .timeline {
   margin: 24px 0 36px 7px;
   padding-left: 24px;
-  border-left: 2px solid #ff0f00;
+  border-left: 2px solid var(--accent);
 }
 
 .timeline-item {
@@ -78,9 +78,9 @@
   left: -30px;
   width: 10px;
   height: 10px;
-  border: 2px solid #ff0f00;
+  border: 2px solid var(--accent);
   border-radius: 50%;
-  background: white;
+  background: var(--background);
 }
 
 .timeline-item > span,
@@ -89,7 +89,7 @@
 }
 
 .timeline-date {
-  color: #ff0f00;
+  color: var(--accent);
   font-size: 13px;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .timeline-item strong + span {
-  color: #555;
+  color: var(--muted);
 }
 
 /* Reinforcement-learning mission */
@@ -108,10 +108,10 @@
 
 .mission-console {
   overflow: hidden;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--border);
   border-radius: 12px;
-  background: #fafafa;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.07);
+  background: var(--surface);
+  box-shadow: 0 18px 50px var(--shadow);
 }
 
 .mission-step {
@@ -120,15 +120,15 @@
   justify-content: flex-end;
   gap: 7px;
   padding: 8px 14px;
-  border-bottom: 1px solid #e4e4e4;
-  color: #888;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
   font-size: 11px;
   letter-spacing: 0.08em;
 }
 
 .mission-step strong {
   min-width: 3ch;
-  color: #272727;
+  color: var(--foreground);
   font-variant-numeric: tabular-nums;
   font-weight: 700;
   text-align: right;
@@ -145,21 +145,21 @@
 }
 
 .mission-metric + .mission-metric {
-  border-left: 1px solid #e4e4e4;
+  border-left: 1px solid var(--border);
 }
 
 .mission-metric span,
 .mission-objective span {
   display: block;
   margin-bottom: 7px;
-  color: #888;
+  color: var(--muted);
   font-size: 11px;
   letter-spacing: 0.08em;
 }
 
 .mission-metric strong {
   display: block;
-  color: #272727;
+  color: var(--foreground);
   font-size: 28px;
   font-weight: 700;
   line-height: 1;
@@ -168,7 +168,7 @@
 
 .mission-metric:first-child strong,
 .mission-metric strong.is-negative {
-  color: #ff0f00;
+  color: var(--accent);
 }
 
 .mission-objective {
@@ -177,12 +177,12 @@
   justify-content: space-between;
   gap: 20px;
   padding: 13px 14px;
-  border-top: 1px solid #e4e4e4;
+  border-top: 1px solid var(--border);
 }
 
 .mission-objective span { margin: 0; }
 .mission-objective strong {
-  color: #555;
+  color: var(--muted);
   font-size: 12px;
   font-weight: 400;
   text-align: right;

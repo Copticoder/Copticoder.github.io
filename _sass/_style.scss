@@ -1,5 +1,31 @@
 @import "vars";
 
+:root {
+    color-scheme: dark;
+    --background: #111113;
+    --surface: #19191c;
+    --surface-raised: #202024;
+    --foreground: #e8e8eb;
+    --muted: #a2a2aa;
+    --border: #323238;
+    --accent: #ff4b40;
+    --accent-soft: rgba(255, 75, 64, 0.14);
+    --shadow: rgba(0, 0, 0, 0.34);
+}
+
+html[data-theme="light"] {
+    color-scheme: light;
+    --background: #ffffff;
+    --surface: #fafafa;
+    --surface-raised: #ffffff;
+    --foreground: #272727;
+    --muted: #66666d;
+    --border: #dddddf;
+    --accent: #ff0f00;
+    --accent-soft: rgba(255, 15, 0, 0.1);
+    --shadow: rgba(0, 0, 0, 0.08);
+}
+
 /*
  * Basic
  */
@@ -8,15 +34,19 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
+    background: var(--background);
 }
 body {
     margin: 0;
     font-family: "Inconsolata";
     height: 100%;
+    background: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 a {
     text-decoration: none;
-    color: $accent;
+    color: var(--accent);
 }
 a:hover {
     text-decoration: underline;
@@ -24,8 +54,7 @@ a:hover {
 hr {
     border: 0;
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid var(--border);
 }
 
 /*
@@ -34,7 +63,7 @@ hr {
 
 #author-name {
     font-size: 30px;
-    color: #272727;
+    color: var(--foreground);
     display: inline-block;
 }
 .navbar {
@@ -49,6 +78,25 @@ hr {
 .nav-list {
     list-style-type: none;
     margin: 0 5px 0 10px;
+}
+
+#theme-toggle {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    color: var(--accent);
+}
+
+#theme-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 .alignable {
     display: inline-block;

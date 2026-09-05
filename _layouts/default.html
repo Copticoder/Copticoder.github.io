@@ -5,6 +5,18 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111113">
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme') === 'light' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = theme;
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'dark' ? '#111113' : '#ffffff');
+        } catch (error) {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
     <meta name="keywords" content="blog, accent, {{ site.author }}, {{ site.title }}, jekyll">
     <meta name="author" content="{{ site.author }}">
     {% if page.url == "/404.html" %}
@@ -72,6 +84,9 @@
                     {% endif %}
                         </li>
                 {% endfor %}
+                <li class="alignable pull-left nav-list theme-nav">/
+                    <button id="theme-toggle" type="button" aria-label="Switch to light mode"><span aria-hidden="true">☼</span> Light</button>
+                </li>
             </ul>
         </div>
         <div style="clear:both"></div>
@@ -85,7 +100,7 @@
                 {% if site.footer == true %}
                     <hr />
                     <p style="text-align: center; margin-bottom: 10px">
-                    <a href="{{ site.footer_url }}" style="color: black"><small>{{ site.footer_text }}</small></a>
+                    <a href="{{ site.footer_url }}"><small>{{ site.footer_text }}</small></a>
                     </p>
                 {% endif %}
             </div>
@@ -100,6 +115,28 @@
           ga('send', 'pageview');
         </script>
     {% endif %}
+    <script>
+      (function () {
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        function updateToggle() {
+          var isDark = document.documentElement.dataset.theme === 'dark';
+          toggle.innerHTML = '<span aria-hidden="true">' + (isDark ? '☼' : '☾') + '</span> ' + (isDark ? 'Light' : 'Dark');
+          toggle.setAttribute('aria-label', 'Switch to ' + (isDark ? 'light' : 'dark') + ' mode');
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', isDark ? '#111113' : '#ffffff');
+        }
+
+        toggle.addEventListener('click', function () {
+          var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = next;
+          try { localStorage.setItem('theme', next); } catch (error) {}
+          updateToggle();
+        });
+
+        updateToggle();
+      })();
+    </script>
 </body>
 <footer>
 </footer>
