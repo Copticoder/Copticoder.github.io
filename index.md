@@ -7,6 +7,21 @@ layout: default
 
 Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and contribute to the betterment of humanity through research in Artificial Intelligent systems. I recieved my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/) under the supervision of [Prof. Alham Fikri Aji](https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en/). My research focuses on Reinforcement Learning, Continual Learning and AI for Science.
 
+<pre class="rl-mission" aria-label="A reinforcement-learning agent exploring states and updating its policy toward a supreme mission">
+                         +-------------------+
+                         |  SUPREME MISSION  |
+                         |    max reward     |
+                         +---------^---------+
+                                   |
+ [agent] --act--> (s1) --explore--> (s2) --best action--+
+    ^                 \               \                  |
+    |                  +--> (s3)       +--> (s4)         |
+    |                       |               |             |
+    +---- update policy &lt;---+---- reward ---+-------------+
+
+                 observe -> act -> learn -> repeat
+</pre>
+
 ## Research Interest
 
 I am interested in Reinforcement Learning, Continual Learning and AI for Science.
