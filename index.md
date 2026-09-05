@@ -11,13 +11,13 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
   <div class="mission-console">
     <div class="mission-status" aria-hidden="true">
       <span><i></i> AGENT ONLINE</span>
+      <span>ACTION <b id="mission-action">EXPLORE</b></span>
       <span id="mission-step">STEP 000</span>
     </div>
-    <svg viewBox="0 0 700 330" role="img" aria-labelledby="mission-title mission-desc">
+    <svg viewBox="0 0 700 282" role="img" aria-labelledby="mission-title mission-desc">
       <title id="mission-title">A reinforcement-learning agent pursuing human flourishing</title>
       <desc id="mission-desc">An agent continually observes the world, takes actions, receives feedback from many human outcomes, and updates its policy toward long-term human flourishing.</desc>
       <defs>
-        <marker id="mission-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" /></marker>
         <filter id="mission-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
       </defs>
 
@@ -47,23 +47,13 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
       <g class="mission-goal" transform="translate(636 91)">
         <circle class="goal-orbit" r="31"/><circle class="goal-pulse" r="22"/><circle class="goal-core" r="9"/>
       </g>
-      <text class="goal-kicker" x="636" y="40" text-anchor="end">SUPREME MISSION</text>
-      <text class="goal-label" x="636" y="55" text-anchor="end">human flourishing ↑</text>
-
-      <g class="feedback-loop">
-        <path d="M620 276C491 315 204 315 76 261" marker-end="url(#mission-arrow)"/>
-        <text x="348" y="307" text-anchor="middle">observe → act → measure impact → update policy → repeat</text>
-      </g>
-
-      <g class="action-readout" transform="translate(28 31)">
-        <text class="readout-key">ACTION</text>
-        <text id="mission-action" class="readout-value" x="52">explore</text>
-      </g>
-      <g class="utility-readout" transform="translate(28 277)">
-        <text class="readout-key">EST. LONG-TERM UTILITY</text>
-        <text id="mission-utility" class="readout-value" x="164">+0.42</text>
-      </g>
+      <text class="goal-kicker" x="636" y="39" text-anchor="middle">SUPREME MISSION</text>
+      <text class="goal-label" x="636" y="54" text-anchor="middle">human flourishing ↑</text>
     </svg>
+    <div class="mission-readout" aria-hidden="true">
+      <span>EST. LONG-TERM UTILITY <b id="mission-utility">+0.42</b></span>
+      <span>OBSERVE · ACT · LEARN · REPEAT</span>
+    </div>
   </div>
   <figcaption id="mission-caption">A policy in perpetual motion—learning from the world, acting under uncertainty, and steering toward better futures.</figcaption>
 </figure>
@@ -79,7 +69,7 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
     let tick = 0;
     window.setInterval(() => {
       tick += 1;
-      action.textContent = actions[tick % actions.length];
+      action.textContent = actions[tick % actions.length].toUpperCase();
       utility.textContent = `+${(0.42 + (tick % 9) * 0.03).toFixed(2)}`;
       step.textContent = `STEP ${String(tick).padStart(3, '0')}`;
     }, 1167);
