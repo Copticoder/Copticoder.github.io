@@ -89,6 +89,20 @@ L_max, L_max - 1, ..., L_min
 
 After this initial phase, both methods spend the remaining 90% of training on standard on-policy TB updates. We do not use an experience replay buffer.
 
+### The curricula in motion
+
+The animations pair the evolving learned distribution with its target and L1 distance. STL grows from short trajectories toward longer ones, while LTS runs the same curriculum in reverse.
+
+<figure>
+  <img src="{{ '/small-then-large-64-2.gif' | relative_url }}" alt="Animation of Small-then-Large training showing the true distribution, evolving learned distribution, and L1 distance over validation steps.">
+  <figcaption>Small-then-Large: build locally, then expand.</figcaption>
+</figure>
+
+<figure>
+  <img src="{{ '/large-then-small-64-2.gif' | relative_url }}" alt="Animation of Large-then-Small training showing the true distribution, evolving learned distribution, and L1 distance over validation steps.">
+  <figcaption>Large-then-Small: explore broadly, then refine.</figcaption>
+</figure>
+
 ## Experimental setup
 
 We evaluated the schedules on HyperGrid, a synthetic discrete DAG whose reward sparsity can be controlled. It is useful here because it lets us systematically make exploration harder while retaining the exact ground-truth terminal distribution.
