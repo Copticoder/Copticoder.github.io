@@ -102,13 +102,103 @@
 }
 
 /* Reinforcement-learning mission */
-.rl-mission {
-  overflow-x: auto;
-  margin: 30px 0 38px;
-  padding: 24px 18px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-left: 4px solid #ff0f00;
-  background: #fafafa;
-  color: #272727;
-  font: 13px/1.45 "Inconsolata", monospace;
+.mission-viz {
+  margin: 34px 0 42px !important;
+}
+
+.mission-viz svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mission-viz text {
+  fill: #555;
+  font-family: "Inconsolata", monospace;
+  font-size: 12px;
+}
+
+.mission-viz .exploration-paths path,
+.mission-viz .policy-loop {
+  fill: none;
+  stroke: #999;
+  stroke-width: 1.5;
+  stroke-dasharray: 5 6;
+}
+
+.mission-viz marker#arrow path { fill: #999; }
+.mission-viz marker#arrow-red path { fill: #ff0f00; }
+
+.mission-viz .failed-states circle,
+.mission-viz .main-states circle {
+  fill: white;
+  stroke: #272727;
+  stroke-width: 2;
+}
+
+.mission-viz .failed-states path {
+  stroke: #999;
+  stroke-width: 1.5;
+}
+
+.mission-viz .optimal-path {
+  fill: none;
+  stroke: #ff0f00;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 12 7;
+  animation: mission-path 1s linear infinite;
+}
+
+.mission-viz .agent {
+  fill: #272727;
+  stroke: white;
+  stroke-width: 3;
+}
+
+.mission-viz .goal circle:not(.goal-pulse) {
+  fill: white;
+  stroke: #ff0f00;
+  stroke-width: 3;
+}
+
+.mission-viz .goal circle:last-of-type {
+  fill: #ff0f00;
+}
+
+.mission-viz .goal-pulse {
+  fill: none;
+  stroke: #ff0f00;
+  transform-origin: 643px 77px;
+  animation: mission-pulse 2s ease-out infinite;
+}
+
+.mission-viz .goal text:first-of-type {
+  fill: #ff0f00;
+  font-weight: 700;
+}
+
+.mission-viz figcaption {
+  margin-top: 10px;
+  color: #777;
+  font-size: 13px;
+  text-align: center;
+}
+
+@keyframes mission-path {
+  to { stroke-dashoffset: -19; }
+}
+
+@keyframes mission-pulse {
+  0% { opacity: 0.8; transform: scale(0.65); }
+  100% { opacity: 0; transform: scale(1.45); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-viz .optimal-path,
+  .mission-viz .goal-pulse {
+    animation: none;
+  }
 }

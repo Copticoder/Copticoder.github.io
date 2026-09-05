@@ -7,20 +7,55 @@ layout: default
 
 Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and contribute to the betterment of humanity through research in Artificial Intelligent systems. I recieved my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/) under the supervision of [Prof. Alham Fikri Aji](https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en/). My research focuses on Reinforcement Learning, Continual Learning and AI for Science.
 
-<pre class="rl-mission" aria-label="A reinforcement-learning agent exploring states and updating its policy toward a supreme mission">
-                         +-------------------+
-                         |  SUPREME MISSION  |
-                         |    max reward     |
-                         +---------^---------+
-                                   |
- [agent] --act--> (s1) --explore--> (s2) --best action--+
-    ^                 \               \                  |
-    |                  +--> (s3)       +--> (s4)         |
-    |                       |               |             |
-    +---- update policy &lt;---+---- reward ---+-------------+
+<figure class="mission-viz">
+  <svg viewBox="0 0 700 285" role="img" aria-labelledby="mission-title mission-desc">
+    <title id="mission-title">An RL agent pursuing its supreme mission</title>
+    <desc id="mission-desc">An agent explores a branching state space, learns from low-reward paths, updates its policy, and repeatedly moves toward the maximum-reward goal.</desc>
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" /></marker>
+      <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" /></marker>
+    </defs>
 
-                 observe -> act -> learn -> repeat
-</pre>
+    <g class="exploration-paths">
+      <path d="M175 137 Q190 65 260 53" />
+      <path d="M291 148 Q315 220 377 231" />
+      <path d="M419 103 Q455 45 505 39" />
+      <path d="M547 127 Q570 205 625 220" />
+    </g>
+    <g class="failed-states">
+      <circle cx="260" cy="53" r="10" /><path d="M254 73 l12 12 m0 -12 l-12 12" />
+      <circle cx="377" cy="231" r="10" /><path d="M371 251 l12 12 m0 -12 l-12 12" />
+      <circle cx="505" cy="39" r="10" /><path d="M499 59 l12 12 m0 -12 l-12 12" />
+      <circle cx="625" cy="220" r="10" /><path d="M619 240 l12 12 m0 -12 l-12 12" />
+    </g>
+
+    <path class="optimal-path" d="M57 173 Q105 155 166 139 Q230 120 282 147 Q345 174 411 106 Q475 43 538 125 Q585 176 643 77" />
+    <g class="main-states">
+      <circle cx="57" cy="173" r="14" />
+      <circle cx="166" cy="139" r="12" />
+      <circle cx="282" cy="147" r="12" />
+      <circle cx="411" cy="106" r="12" />
+      <circle cx="538" cy="125" r="12" />
+    </g>
+
+    <g class="goal">
+      <circle class="goal-pulse" cx="643" cy="77" r="28" />
+      <circle cx="643" cy="77" r="20" />
+      <circle cx="643" cy="77" r="8" />
+      <text x="643" y="28" text-anchor="middle">SUPREME MISSION</text>
+      <text x="643" y="118" text-anchor="middle">max reward</text>
+    </g>
+
+    <circle class="agent" r="7">
+      <animateMotion dur="5s" repeatCount="indefinite" path="M57 173 Q105 155 166 139 Q230 120 282 147 Q345 174 411 106 Q475 43 538 125 Q585 176 643 77" />
+    </circle>
+
+    <path class="policy-loop" d="M620 184 Q355 294 77 213" marker-end="url(#arrow)" />
+    <text class="loop-label" x="350" y="270" text-anchor="middle">reward → update policy → explore again</text>
+    <text class="state-label" x="57" y="202" text-anchor="middle">agent</text>
+  </svg>
+  <figcaption>Always exploring. Always learning. Always moving toward the highest reward.</figcaption>
+</figure>
 
 ## Research Interest
 
