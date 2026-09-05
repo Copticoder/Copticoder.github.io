@@ -11,10 +11,9 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
   <div class="mission-console">
     <div class="mission-status" aria-hidden="true">
       <span><i></i> AGENT ONLINE</span>
-      <span>ACTION <b id="mission-action">EXPLORE</b></span>
       <span id="mission-step">STEP 000</span>
     </div>
-    <svg viewBox="0 0 700 282" role="img" aria-labelledby="mission-title mission-desc">
+    <svg viewBox="0 0 700 300" role="img" aria-labelledby="mission-title mission-desc">
       <title id="mission-title">A reinforcement-learning agent pursuing human flourishing</title>
       <desc id="mission-desc">An agent continually observes the world, takes actions, receives feedback from many human outcomes, and updates its policy toward long-term human flourishing.</desc>
       <defs>
@@ -49,11 +48,16 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
       </g>
       <text class="goal-kicker" x="636" y="39" text-anchor="middle">SUPREME MISSION</text>
       <text class="goal-label" x="636" y="54" text-anchor="middle">human flourishing ↑</text>
+
+      <g class="action-readout">
+        <text class="readout-key" x="28" y="29">CURRENT ACTION</text>
+        <text id="mission-action" class="readout-value" x="28" y="45">explore</text>
+      </g>
+      <g class="utility-readout">
+        <text class="readout-key" x="28" y="268">EST. LONG-TERM UTILITY</text>
+        <text id="mission-utility" class="readout-value" x="28" y="284">+0.42</text>
+      </g>
     </svg>
-    <div class="mission-readout" aria-hidden="true">
-      <span>EST. LONG-TERM UTILITY <b id="mission-utility">+0.42</b></span>
-      <span>OBSERVE · ACT · LEARN · REPEAT</span>
-    </div>
   </div>
   <figcaption id="mission-caption">A policy in perpetual motion—learning from the world, acting under uncertainty, and steering toward better futures.</figcaption>
 </figure>
@@ -69,7 +73,7 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
     let tick = 0;
     window.setInterval(() => {
       tick += 1;
-      action.textContent = actions[tick % actions.length].toUpperCase();
+      action.textContent = actions[tick % actions.length];
       utility.textContent = `+${(0.42 + (tick % 9) * 0.03).toFixed(2)}`;
       step.textContent = `STEP ${String(tick).padStart(3, '0')}`;
     }, 1167);
