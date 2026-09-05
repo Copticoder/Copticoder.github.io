@@ -7,16 +7,12 @@ layout: default
 
 Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and contribute to the betterment of humanity through research in Artificial Intelligent systems. I recieved my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/) under the supervision of [Prof. Alham Fikri Aji](https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en/). My research focuses on Reinforcement Learning, Continual Learning and AI for Science.
 
-<figure class="mission-viz" aria-labelledby="mission-caption">
-  <div class="mission-console">
-    <div class="mission-status" aria-hidden="true">
-      <span><i></i> AGENT ONLINE</span>
-      <span id="mission-step">STEP 000</span>
-    </div>
-    <div class="mission-agent" role="img" aria-label="An active reinforcement-learning agent changes state and receives a reward at every step.">
+<figure class="mission-viz">
+  <div class="mission-console" role="img" aria-label="An active reinforcement-learning agent takes an action, receives a reward, and pursues the goal of maximizing humanity's long-term utility.">
+    <div class="mission-agent">
       <div class="mission-metric">
-        <span>STATE</span>
-        <strong id="mission-state">explore</strong>
+        <span>ACTION</span>
+        <strong id="mission-action">explore</strong>
       </div>
       <div class="mission-metric">
         <span>REWARD</span>
@@ -28,7 +24,6 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
       <strong>maximize humanity's long-term utility</strong>
     </div>
   </div>
-  <figcaption id="mission-caption">Act. Observe. Learn. Repeat.</figcaption>
 </figure>
 
 <script>
@@ -44,17 +39,15 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
       ['reflect', '+0.09'],
       ['learn', '+0.63']
     ];
-    const state = root.querySelector('#mission-state');
+    const action = root.querySelector('#mission-action');
     const reward = root.querySelector('#mission-reward');
-    const step = root.querySelector('#mission-step');
     let tick = 0;
     window.setInterval(() => {
       tick += 1;
       const transition = transitions[tick % transitions.length];
-      state.textContent = transition[0];
+      action.textContent = transition[0];
       reward.textContent = transition[1];
       reward.classList.toggle('is-negative', transition[1][0] === '-');
-      step.textContent = `STEP ${String(tick).padStart(3, '0')}`;
     }, 1167);
   })();
 </script>
