@@ -20,8 +20,8 @@ We investigated a simple intervention: **during early training, control the orde
 A GFlowNet constructs an object through a sequence of actions. The states and allowed transitions form a directed acyclic graph (DAG). A trajectory begins at an initial state, follows edges through the graph, and ends at a terminal state `x` with non-negative reward `R(x)`.
 
 <figure>
-  <img src="{{ '/assets/ordered-gflownets/dag-example.png' | relative_url }}" alt="A directed acyclic graph with several construction paths and two rewarded terminal states.">
-  <figcaption>A small construction graph. Different action sequences can terminate at different rewarded states, and multiple paths may merge.</figcaption>
+  <img src="{{ '/gflownet_anim.gif' | relative_url }}" alt="Animated GFlowNet represented as water particles flowing through a directed acyclic graph.">
+  <figcaption>Illustration of a GFlowNet as water flowing through a DAG. Circles are partial objects, squares are terminal samples, and edges are actions. The initial flow through s₀ equals the total terminal flow; at every internal state, incoming and outgoing flow match, while each terminal flow is constrained to R(x). Red edges represent terminating actions. Adapted from the <a href="https://milayb.notion.site/The-GFlowNet-Tutorial-95434ef0e2d94c24aab90e69b30be9b3">GFlowNet Tutorial</a> [7].</figcaption>
 </figure>
 
 The goal is not to maximize reward in the usual reinforcement-learning sense. Instead, the terminal sampling probability should be proportional to reward:
@@ -175,6 +175,7 @@ The central lesson is simple: exploration depends not only on **where** a genera
 4. Bengio, Y., Louradour, J., Collobert, R., and Weston, J. [“Curriculum Learning.”](https://doi.org/10.1145/1553374.1553380) ICML, 2009.
 5. Hong, Z.-W., Chen, T., Lin, Y.-C., Pajarinen, J., and Agrawal, P. [“Topological Experience Replay.”](https://arxiv.org/abs/2203.15845) 2023.
 6. Lahlou, S., Viviano, J. D., Schmidt, V., and Bengio, Y. [“TorchGFN: A PyTorch GFlowNet Library.”](https://arxiv.org/abs/2305.14594) 2023.
+7. Mila. [“The GFlowNet Tutorial.”](https://milayb.notion.site/The-GFlowNet-Tutorial-95434ef0e2d94c24aab90e69b30be9b3)
 
 ---
 
