@@ -3,8 +3,7 @@ layout: default
 is_contact: true
 ---
 
-* Email: [ahmed.attia@mbzuai.ac.ae](ahmed.attia@mbzuai.ac.ae)
-* Phone: [+971-501862157](tel:+971-501862157)
+* Email: [ahmed.attia@alumni.mbzuai.ac.ae](mailto:ahmed.attia@alumni.mbzuai.ac.ae)
 * Github: [Copticoder](https://github.com/Copticoder)
 
 ---

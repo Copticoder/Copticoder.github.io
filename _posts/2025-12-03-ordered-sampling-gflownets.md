@@ -7,7 +7,7 @@ date: 2025-12-03
 
 # Exploring Ordered Sampling in Generative Flow Networks
 
-*[Ahmed (Amet) Attia](https://scholar.google.com/citations?hl=en&user=8SPGWvEAAAAJ), [Idriss Malek](https://scholar.google.com/citations?user=JPQ3ue4AAAAJ&hl=fr), and [Salem Lahlou](https://scholar.google.com/citations?user=xLSkCrIAAAAJ&hl=en) · December 3, 2025*
+*[Ahmed Attia](https://scholar.google.com/citations?hl=en&user=8SPGWvEAAAAJ), [Idriss Malek](https://scholar.google.com/citations?user=JPQ3ue4AAAAJ&hl=fr), and [Salem Lahlou](https://scholar.google.com/citations?user=xLSkCrIAAAAJ&hl=en) · December 3, 2025*
 
 Generative Flow Networks, or GFlowNets, are designed to sample many good solutions rather than return only one optimum. That property is attractive in scientific discovery: if several molecules, structures, or sequences are promising, we want a model that represents all of them [[1]](#references), [[2]](#references).
 
