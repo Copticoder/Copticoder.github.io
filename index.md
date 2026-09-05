@@ -88,7 +88,3 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
 *December 3, 2025*
 
 Can choosing which trajectory lengths a GFlowNet sees first improve exploration? We study two simple curricula and find that learning from short trajectories before long ones is especially effective when rewards are sparse.
-
----
-
-> Hardwork Beats Talent, Eventually.
