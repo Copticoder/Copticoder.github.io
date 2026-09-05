@@ -5,12 +5,11 @@ layout: default
 
 <img class="profile-picture" src="personal picture.jpg">
 
-Hi! My name is Ahmed Attia. I recieved my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/). 
-
+Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and contribute to the betterment of humanity through research in Artificial Intelligent systems. I recieved my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/) under the supervision of [Prof. Alham Fikri Aji](https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en/). My research focuses on Reinforcement Learning, Continual Learning and AI for Science.
 
 ## Research Interest
 
-At the moment, I am interested in Reinforcement Learning, AI for Science and Continual Learning.
+I am interested in Reinforcement Learning, Continual Learning and AI for Science.
 
 ## Timeline
 
