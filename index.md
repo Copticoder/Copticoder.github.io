@@ -7,55 +7,84 @@ layout: default
 
 Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and contribute to the betterment of humanity through research in Artificial Intelligent systems. I recieved my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/) under the supervision of [Prof. Alham Fikri Aji](https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en/). My research focuses on Reinforcement Learning, Continual Learning and AI for Science.
 
-<figure class="mission-viz">
-  <svg viewBox="0 0 700 285" role="img" aria-labelledby="mission-title mission-desc">
-    <title id="mission-title">An RL agent pursuing its supreme mission</title>
-    <desc id="mission-desc">An agent explores a branching state space, learns from low-reward paths, updates its policy, and repeatedly moves toward the maximum-reward goal.</desc>
-    <defs>
-      <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" /></marker>
-      <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" /></marker>
-    </defs>
+<figure class="mission-viz" aria-labelledby="mission-caption">
+  <div class="mission-console">
+    <div class="mission-status" aria-hidden="true">
+      <span><i></i> AGENT ONLINE</span>
+      <span id="mission-step">STEP 000</span>
+    </div>
+    <svg viewBox="0 0 700 330" role="img" aria-labelledby="mission-title mission-desc">
+      <title id="mission-title">A reinforcement-learning agent pursuing human flourishing</title>
+      <desc id="mission-desc">An agent continually observes the world, takes actions, receives feedback from many human outcomes, and updates its policy toward long-term human flourishing.</desc>
+      <defs>
+        <marker id="mission-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" /></marker>
+        <filter id="mission-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
 
-    <g class="exploration-paths">
-      <path d="M175 137 Q190 65 260 53" />
-      <path d="M291 148 Q315 220 377 231" />
-      <path d="M419 103 Q455 45 505 39" />
-      <path d="M547 127 Q570 205 625 220" />
-    </g>
-    <g class="failed-states">
-      <circle cx="260" cy="53" r="10" /><path d="M254 73 l12 12 m0 -12 l-12 12" />
-      <circle cx="377" cy="231" r="10" /><path d="M371 251 l12 12 m0 -12 l-12 12" />
-      <circle cx="505" cy="39" r="10" /><path d="M499 59 l12 12 m0 -12 l-12 12" />
-      <circle cx="625" cy="220" r="10" /><path d="M619 240 l12 12 m0 -12 l-12 12" />
-    </g>
+      <g class="world-grid">
+        <path d="M28 57H672M28 107H672M28 157H672M28 207H672M28 257H672M78 32V282M178 32V282M278 32V282M378 32V282M478 32V282M578 32V282" />
+      </g>
 
-    <path class="optimal-path" d="M57 173 Q105 155 166 139 Q230 120 282 147 Q345 174 411 106 Q475 43 538 125 Q585 176 643 77" />
-    <g class="main-states">
-      <circle cx="57" cy="173" r="14" />
-      <circle cx="166" cy="139" r="12" />
-      <circle cx="282" cy="147" r="12" />
-      <circle cx="411" cy="106" r="12" />
-      <circle cx="538" cy="125" r="12" />
-    </g>
+      <g class="world-signals">
+        <circle cx="75" cy="77" r="4"/><circle cx="130" cy="238" r="4"/><circle cx="213" cy="63" r="4"/>
+        <circle cx="287" cy="252" r="4"/><circle cx="378" cy="69" r="4"/><circle cx="463" cy="239" r="4"/>
+        <circle cx="555" cy="62" r="4"/><circle cx="624" cy="245" r="4"/>
+      </g>
 
-    <g class="goal">
-      <circle class="goal-pulse" cx="643" cy="77" r="28" />
-      <circle cx="643" cy="77" r="20" />
-      <circle cx="643" cy="77" r="8" />
-      <text x="643" y="28" text-anchor="middle">SUPREME MISSION</text>
-      <text x="643" y="118" text-anchor="middle">max reward</text>
-    </g>
+      <g class="trajectory">
+        <path class="trail trail-ghost" d="M58 222C105 192 116 97 174 118S230 226 292 199S347 80 407 111S463 217 519 178S570 84 636 91" />
+        <path class="trail trail-live" d="M58 222C105 192 116 97 174 118S230 226 292 199S347 80 407 111S463 217 519 178S570 84 636 91" />
+        <g class="state-nodes">
+          <circle cx="58" cy="222" r="7"/><circle cx="174" cy="118" r="7"/><circle cx="292" cy="199" r="7"/>
+          <circle cx="407" cy="111" r="7"/><circle cx="519" cy="178" r="7"/>
+        </g>
+        <g class="agent-token" filter="url(#mission-glow)">
+          <circle r="13"/><path d="M-5 0h10M0-5v10"/>
+          <animateMotion dur="7s" repeatCount="indefinite" path="M58 222C105 192 116 97 174 118S230 226 292 199S347 80 407 111S463 217 519 178S570 84 636 91" />
+        </g>
+      </g>
 
-    <circle class="agent" r="7">
-      <animateMotion dur="5s" repeatCount="indefinite" path="M57 173 Q105 155 166 139 Q230 120 282 147 Q345 174 411 106 Q475 43 538 125 Q585 176 643 77" />
-    </circle>
+      <g class="mission-goal" transform="translate(636 91)">
+        <circle class="goal-orbit" r="31"/><circle class="goal-pulse" r="22"/><circle class="goal-core" r="9"/>
+      </g>
+      <text class="goal-kicker" x="636" y="40" text-anchor="end">SUPREME MISSION</text>
+      <text class="goal-label" x="636" y="55" text-anchor="end">human flourishing ↑</text>
 
-    <path class="policy-loop" d="M620 184 Q355 294 77 213" marker-end="url(#arrow)" />
-    <text class="loop-label" x="350" y="270" text-anchor="middle">reward → update policy → explore again</text>
-    <text class="state-label" x="57" y="202" text-anchor="middle">agent</text>
-  </svg>
-  <figcaption>Always exploring. Always learning. Always moving toward the highest reward.</figcaption>
+      <g class="feedback-loop">
+        <path d="M620 276C491 315 204 315 76 261" marker-end="url(#mission-arrow)"/>
+        <text x="348" y="307" text-anchor="middle">observe → act → measure impact → update policy → repeat</text>
+      </g>
+
+      <g class="action-readout" transform="translate(28 31)">
+        <text class="readout-key">ACTION</text>
+        <text id="mission-action" class="readout-value" x="52">explore</text>
+      </g>
+      <g class="utility-readout" transform="translate(28 277)">
+        <text class="readout-key">EST. LONG-TERM UTILITY</text>
+        <text id="mission-utility" class="readout-value" x="164">+0.42</text>
+      </g>
+    </svg>
+  </div>
+  <figcaption id="mission-caption">A policy in perpetual motion—learning from the world, acting under uncertainty, and steering toward better futures.</figcaption>
 </figure>
+
+<script>
+  (() => {
+    const root = document.querySelector('.mission-viz');
+    if (!root || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const actions = ['explore', 'reason', 'cooperate', 'discover', 'build', 'reflect'];
+    const action = root.querySelector('#mission-action');
+    const utility = root.querySelector('#mission-utility');
+    const step = root.querySelector('#mission-step');
+    let tick = 0;
+    window.setInterval(() => {
+      tick += 1;
+      action.textContent = actions[tick % actions.length];
+      utility.textContent = `+${(0.42 + (tick % 9) * 0.03).toFixed(2)}`;
+      step.textContent = `STEP ${String(tick).padStart(3, '0')}`;
+    }, 1167);
+  })();
+</script>
 
 ## Research Interest
 
