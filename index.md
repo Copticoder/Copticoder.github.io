@@ -21,30 +21,30 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
       </defs>
 
       <g class="world-grid">
-        <path d="M28 57H672M28 107H672M28 157H672M28 207H672M28 257H672M78 32V282M178 32V282M278 32V282M378 32V282M478 32V282M578 32V282" />
+        <path fill="none" stroke="#dedede" d="M28 57H672M28 107H672M28 157H672M28 207H672M28 257H672M78 32V282M178 32V282M278 32V282M378 32V282M478 32V282M578 32V282" />
       </g>
 
-      <g class="world-signals">
+      <g class="world-signals" fill="#aaa">
         <circle cx="75" cy="77" r="4"/><circle cx="130" cy="238" r="4"/><circle cx="213" cy="63" r="4"/>
         <circle cx="287" cy="252" r="4"/><circle cx="378" cy="69" r="4"/><circle cx="463" cy="239" r="4"/>
         <circle cx="555" cy="62" r="4"/><circle cx="624" cy="245" r="4"/>
       </g>
 
       <g class="trajectory">
-        <path class="trail trail-ghost" d="M58 222C105 192 116 97 174 118S230 226 292 199S347 80 407 111S463 217 519 178S570 84 636 91" />
-        <path class="trail trail-live" d="M58 222C105 192 116 97 174 118S230 226 292 199S347 80 407 111S463 217 519 178S570 84 636 91" />
-        <g class="state-nodes">
+        <path class="trail trail-ghost" fill="none" stroke="#c9c9c9" d="M58 222C105 192 116 97 174 118S230 226 292 199S347 80 407 111S463 217 519 178S570 84 636 91" />
+        <path class="trail trail-live" fill="none" stroke="#ff0f00" d="M58 222C105 192 116 97 174 118S230 226 292 199S347 80 407 111S463 217 519 178S570 84 636 91" />
+        <g class="state-nodes" fill="#fafafa" stroke="#999">
           <circle cx="58" cy="222" r="7"/><circle cx="174" cy="118" r="7"/><circle cx="292" cy="199" r="7"/>
           <circle cx="407" cy="111" r="7"/><circle cx="519" cy="178" r="7"/>
         </g>
         <g class="agent-token" filter="url(#mission-glow)">
-          <circle r="13"/><path d="M-5 0h10M0-5v10"/>
+          <circle r="13" fill="#ff0f00" stroke="#fafafa"/><path d="M-5 0h10M0-5v10" fill="none" stroke="#fff"/>
           <animateMotion dur="7s" repeatCount="indefinite" path="M58 222C105 192 116 97 174 118S230 226 292 199S347 80 407 111S463 217 519 178S570 84 636 91" />
         </g>
       </g>
 
       <g class="mission-goal" transform="translate(636 91)">
-        <circle class="goal-orbit" r="31"/><circle class="goal-pulse" r="22"/><circle class="goal-core" r="9"/>
+        <circle class="goal-orbit" r="31" fill="none" stroke="#ff0f00"/><circle class="goal-pulse" r="22" fill="none" stroke="#ff0f00"/><circle class="goal-core" r="9" fill="#ff0f00"/>
       </g>
       <text class="goal-kicker" x="636" y="39" text-anchor="middle">SUPREME MISSION</text>
       <text class="goal-label" x="636" y="54" text-anchor="middle">human flourishing ↑</text>

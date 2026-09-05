@@ -211,6 +211,7 @@
   stroke-width: 1;
   stroke-dasharray: 4 5;
   transform-origin: center;
+  transform-box: fill-box;
   animation: mission-orbit 8s linear infinite;
 }
 
@@ -220,6 +221,7 @@
 
 .mission-viz .goal-pulse {
   transform-origin: center;
+  transform-box: fill-box;
   animation: mission-pulse 2.4s ease-out infinite;
 }
 
