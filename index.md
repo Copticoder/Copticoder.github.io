@@ -5,12 +5,22 @@ layout: default
 
 <img class="profile-picture" src="personal picture.jpg">
 
-Hi! My name is Ahmed Attia. I have finished my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/).
+Hi! My name is Ahmed Attia. I recieved my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/). 
 
 
 ## Research Interest
 
-At the moment, I am interested in Deep Reinforcement Learning, Meta Learning, Multi-Agent Systems.
+At the moment, I am interested in Reinforcement Learning, AI for Science and Continual Learning.
+
+## Research
+
+1. **[Accurate and Diverse LLM Mathematical Reasoning via Automated PRM-Guided GFlowNets](https://arxiv.org/abs/2504.19981)**  
+   Adam Younsi, Ahmed Attia, Abdalgader Abubaker, Mohamed El Amine Seddik, Hakim Hacid, and Salem Lahlou. 2025.
+
+2. **[Improving Low-Resource Machine Translation via Round-Trip Reinforcement Learning](https://arxiv.org/abs/2601.12535)**  
+   Ahmed Attia and Alham Fikri Aji. 2026.
+
+[View all publications on Google Scholar](https://scholar.google.com/citations?user=8SPGWvEAAAAJ&hl=en).
 
 ---
 
