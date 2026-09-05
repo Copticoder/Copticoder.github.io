@@ -5,7 +5,7 @@ layout: default
 
 <img class="profile-picture" src="personal picture.jpg">
 
-Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and contribute to the betterment of humanity through research in Artificial Intelligent systems. I recieved my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/) under the supervision of [Prof. Alham Fikri Aji](https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en/). My research focuses on Reinforcement Learning, Continual Learning and AI for Science.
+Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and contribute to the betterment of humanity through research in Artificial Intelligent systems. I recieved my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/) under the supervision of [Prof. Alham Fikri Aji](https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en/) and [Prof. Salem Lahlou](https://lahlou.org/research-group/). My research focuses on Reinforcement Learning, Continual Learning and AI for Science.
 
 <figure class="mission-viz">
   <div class="mission-console" role="img" aria-label="An active reinforcement-learning agent takes an action, receives a reward, and pursues the goal of maximizing humanity's long-term utility.">
@@ -61,36 +61,6 @@ Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and co
 ## Research Interest
 
 I am interested in Reinforcement Learning, Continual Learning and AI for Science.
-
-## Timeline
-
-<div class="timeline">
-  <div class="timeline-item">
-    <span class="timeline-date">Feb 2026 - May 2026</span>
-    <strong>Student Resident, Institute of Foundation Models</strong>
-    <span>MBZUAI · Reinforcement-learning post-training for mathematical reasoning and code generation.</span>
-  </div>
-  <div class="timeline-item">
-    <span class="timeline-date">May 2025 - Jul 2025</span>
-    <strong>R&amp;D Machine Learning Engineer</strong>
-    <span>Yalla Group · Deep reinforcement learning and distributed training for a Draw Dominoes agent.</span>
-  </div>
-  <div class="timeline-item">
-    <span class="timeline-date">Aug 2024 - 2026</span>
-    <strong>MSc in Natural Language Processing</strong>
-    <span>Mohamed bin Zayed University of Artificial Intelligence.</span>
-  </div>
-  <div class="timeline-item">
-    <span class="timeline-date">Jul 2022 - Jun 2024</span>
-    <strong>Natural Language Processing Engineer Intern</strong>
-    <span>SpeedLegal · Retrieval-augmented generation and information extraction for contract review.</span>
-  </div>
-  <div class="timeline-item">
-    <span class="timeline-date">Aug 2020 - Jul 2024</span>
-    <strong>BSc in Artificial Intelligence</strong>
-    <span>Kafr El-Sheikh University, Faculty of Artificial Intelligence.</span>
-  </div>
-</div>
 
 ## Research
 
