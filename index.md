@@ -12,6 +12,36 @@ Hi! My name is Ahmed Attia. I recieved my MSc from [Mohamed bin Zayed University
 
 At the moment, I am interested in Reinforcement Learning, AI for Science and Continual Learning.
 
+## Timeline
+
+<div class="timeline">
+  <div class="timeline-item">
+    <span class="timeline-date">Feb 2026 - May 2026</span>
+    <strong>Student Resident, Institute of Foundation Models</strong>
+    <span>MBZUAI · Reinforcement-learning post-training for mathematical reasoning and code generation.</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-date">May 2025 - Jul 2025</span>
+    <strong>R&amp;D Machine Learning Engineer</strong>
+    <span>Yalla Group · Deep reinforcement learning and distributed training for a Draw Dominoes agent.</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-date">Aug 2024 - 2026</span>
+    <strong>MSc in Natural Language Processing</strong>
+    <span>Mohamed bin Zayed University of Artificial Intelligence.</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-date">Jul 2022 - Jun 2024</span>
+    <strong>Natural Language Processing Engineer Intern</strong>
+    <span>SpeedLegal · Retrieval-augmented generation and information extraction for contract review.</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-date">Aug 2020 - Jul 2024</span>
+    <strong>BSc in Artificial Intelligence</strong>
+    <span>Kafr El-Sheikh University, Faculty of Artificial Intelligence.</span>
+  </div>
+</div>
+
 ## Research
 
 1. **[Improving Low-Resource Machine Translation via Round-Trip Reinforcement Learning](https://arxiv.org/abs/2601.12535)**  

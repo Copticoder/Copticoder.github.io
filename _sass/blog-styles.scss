@@ -54,3 +54,49 @@
     width: 100%;
   }
 }
+
+/* Homepage timeline */
+.timeline {
+  margin: 24px 0 36px 7px;
+  padding-left: 24px;
+  border-left: 2px solid #ff0f00;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -30px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ff0f00;
+  border-radius: 50%;
+  background: white;
+}
+
+.timeline-item > span,
+.timeline-item > strong {
+  display: block;
+}
+
+.timeline-date {
+  color: #ff0f00;
+  font-size: 13px;
+}
+
+.timeline-item strong {
+  margin: 2px 0;
+}
+
+.timeline-item strong + span {
+  color: #555;
+}
