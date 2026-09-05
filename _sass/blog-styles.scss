@@ -136,104 +136,59 @@
   animation: mission-status 1.6s ease-in-out infinite;
 }
 
-.mission-console svg {
+.mission-agent {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mission-metric {
+  min-width: 0;
+  padding: 28px 30px 30px;
+}
+
+.mission-metric + .mission-metric {
+  border-left: 1px solid #e4e4e4;
+}
+
+.mission-metric span,
+.mission-objective span {
   display: block;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-.mission-viz text {
-  fill: #6b6b6b;
-  font-family: "Inconsolata", monospace;
+  margin-bottom: 7px;
+  color: #888;
   font-size: 11px;
+  letter-spacing: 0.08em;
 }
 
-.mission-viz .world-grid path {
-  fill: none;
-  stroke: #dedede;
-  stroke-width: 1;
-  opacity: 0.5;
-}
-
-.mission-viz .world-signals circle {
-  fill: #aaa;
-  opacity: 0.35;
-  animation: mission-signal 3s ease-in-out infinite;
-}
-
-.mission-viz .world-signals circle:nth-child(2n) { animation-delay: -1s; }
-.mission-viz .world-signals circle:nth-child(3n) { animation-delay: -2s; }
-
-.mission-viz .trail {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.mission-viz .trail-ghost {
-  stroke: #c9c9c9;
-  stroke-width: 2;
-}
-
-.mission-viz .trail-live {
-  stroke: #ff0f00;
-  stroke-width: 2.5;
-  stroke-dasharray: 4 12;
-  animation: mission-path 1.2s linear infinite;
-}
-
-.mission-viz .state-nodes circle {
-  fill: #fafafa;
-  stroke: #999;
-  stroke-width: 1.5;
-}
-
-.mission-viz .agent-token circle {
-  fill: #ff0f00;
-  stroke: #fafafa;
-  stroke-width: 4;
-}
-
-.mission-viz .agent-token path {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 1.5;
-}
-
-.mission-viz .goal-orbit,
-.mission-viz .goal-pulse {
-  fill: none;
-  stroke: #ff0f00;
-}
-
-.mission-viz .goal-orbit {
-  stroke-width: 1;
-  stroke-dasharray: 4 5;
-  transform-origin: center;
-  transform-box: fill-box;
-  animation: mission-orbit 8s linear infinite;
-}
-
-.mission-viz .goal-core {
-  fill: #ff0f00;
-}
-
-.mission-viz .goal-pulse {
-  transform-origin: center;
-  transform-box: fill-box;
-  animation: mission-pulse 2.4s ease-out infinite;
-}
-
-.mission-viz .goal-kicker,
-.mission-viz .readout-value {
-  fill: #ff0f00;
+.mission-metric strong {
+  display: block;
+  color: #272727;
+  font-size: 28px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  line-height: 1;
+  animation: mission-value 1.167s ease-in-out infinite;
 }
 
-.mission-viz .goal-label { fill: #555; }
-.mission-viz .readout-key { fill: #999; letter-spacing: 0.05em; }
+.mission-metric:first-child strong,
+.mission-metric strong.is-negative {
+  color: #ff0f00;
+}
+
+.mission-objective {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 14px;
+  border-top: 1px solid #e4e4e4;
+}
+
+.mission-objective span { margin: 0; }
+.mission-objective strong {
+  color: #555;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
+}
 
 @keyframes mission-status {
   50% { opacity: 0.35; transform: scale(0.85); }
@@ -246,21 +201,9 @@
   text-align: center;
 }
 
-@keyframes mission-path {
-  to { stroke-dashoffset: -19; }
-}
-
-@keyframes mission-pulse {
-  0% { opacity: 0.75; transform: scale(0.55); }
-  100% { opacity: 0; transform: scale(1.5); }
-}
-
-@keyframes mission-orbit {
-  to { transform: rotate(360deg); }
-}
-
-@keyframes mission-signal {
-  50% { opacity: 0.8; transform: scale(1.6); }
+@keyframes mission-value {
+  0%, 75% { opacity: 1; transform: translateY(0); }
+  92% { opacity: 0; transform: translateY(-3px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -273,4 +216,12 @@
 @media (max-width: 500px) {
   .mission-status { padding: 8px 10px; }
   .mission-console { border-radius: 8px; }
+  .mission-metric { padding: 22px 18px 24px; }
+  .mission-metric strong { font-size: 22px; }
+  .mission-objective {
+    display: block;
+    padding: 11px 10px;
+  }
+  .mission-objective span { margin-bottom: 4px; }
+  .mission-objective strong { text-align: left; }
 }
