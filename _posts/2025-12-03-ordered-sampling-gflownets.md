@@ -91,19 +91,6 @@ L_max, L_max - 1, ..., L_min
 
 After this initial phase, both methods spend the remaining 90% of training on standard on-policy TB updates. We do not use an experience replay buffer.
 
-### The curricula in motion
-
-The animations pair the evolving learned distribution with its target and L1 distance. STL grows from short trajectories toward longer ones, while LTS runs the same curriculum in reverse. It's evident that STL converges more quickly, finds all the modes, and achieves a lower final L1 distance.
-
-<figure>
-  <img src="{{ '/small-then-large-64-2.gif' | relative_url }}" alt="Animation of Small-then-Large training showing the true distribution, evolving learned distribution, and L1 distance over validation steps.">
-  <figcaption>Small-then-Large</figcaption>
-</figure>
-
-<figure>
-  <img src="{{ '/large-then-small-64-2.gif' | relative_url }}" alt="Animation of Large-then-Small training showing the true distribution, evolving learned distribution, and L1 distance over validation steps.">
-  <figcaption>Large-then-Small</figcaption>
-</figure>
 
 ## Experimental setup
 
@@ -156,6 +143,20 @@ The plots below show L1 distance throughout training for nine representative run
   <figure><img src="{{ '/assets/ordered-gflownets/learning-08.png' | relative_url }}" alt="Learning curve comparison for representative run 8."></figure>
   <figure><img src="{{ '/assets/ordered-gflownets/learning-09.png' | relative_url }}" alt="Learning curve comparison for representative run 9."></figure>
 </div>
+
+### The curricula in motion
+
+The animations pair the evolving learned distribution with its target and L1 distance. STL grows from short trajectories toward longer ones, while LTS runs the same curriculum in reverse. It's evident that STL converges more quickly, finds all the modes, and achieves a lower final L1 distance.
+
+<figure>
+  <img src="{{ '/small-then-large-64-2.gif' | relative_url }}" alt="Animation of Small-then-Large training showing the true distribution, evolving learned distribution, and L1 distance over validation steps.">
+  <figcaption>Small-then-Large</figcaption>
+</figure>
+
+<figure>
+  <img src="{{ '/large-then-small-64-2.gif' | relative_url }}" alt="Animation of Large-then-Small training showing the true distribution, evolving learned distribution, and L1 distance over validation steps.">
+  <figcaption>Large-then-Small</figcaption>
+</figure>
 
 ## What we learned
 
