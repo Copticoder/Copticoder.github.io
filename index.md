@@ -20,6 +20,8 @@ layout: default
 
 Hi! My name is Ahmed Attia and I'm on an endeavor to satisfy my curiosity and contribute to the betterment of humanity through research in Artificial Intelligent systems. I recieved my MSc from [Mohamed bin Zayed University of Artificial Intelligence: MBZUAI](https://mbzuai.ac.ae/) under the supervision of [Prof. Alham Fikri Aji](https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en/) and [Prof. Salem Lahlou](https://lahlou.org/research-group/). I'm mainly interested in Reinforcement Learning, Reliablity, Robustness of ML Systems and AI for Science.
 
+I’m currently a Research Engineer at [GenBio AI](https://genbio.ai), building AI systems that model how cells respond to genetic and chemical perturbations.
+
 <figure class="mission-viz">
   <div class="mission-console" role="img" aria-label="An active reinforcement-learning agent takes an action, receives a reward, and pursues the goal of maximizing humanity's long-term utility.">
     <div class="mission-step">
